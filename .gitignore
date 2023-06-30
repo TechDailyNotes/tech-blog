@@ -1,0 +1,8 @@
+# IDE
+.vscode
+
+# Virtual Environment
+env
+
+# Python
+__pycache__
