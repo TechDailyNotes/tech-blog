@@ -63,5 +63,7 @@ git branch -D <branch-name>
 ```bash
 git push <repo-name> --delete <branch-name>
 # or
+git push <repo-name> -d <branch-name>
+# or
 git push <repo-name> !<branch-name>
 ```
