@@ -5,4 +5,4 @@ st.header("Git")
 
 tab1 = st.tabs(["Commands"])
 
-tab1.markdown(read_markdown_file("git.md"))
+tab1.markdown(read_markdown_file("gitCommands.md"))
