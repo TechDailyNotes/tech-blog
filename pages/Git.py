@@ -3,6 +3,7 @@ from utils import read_markdown_file
 
 st.header("Git")
 
-tab1 = st.tabs(["Commands"])
+tab1 = st.tabs(["Commands", "Theories"])
 
-tab1.markdown(read_markdown_file("gitCommands.md"))
+with tab1:
+  st.markdown(read_markdown_file("gitCommands.md"))
