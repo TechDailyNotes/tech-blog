@@ -1,6 +1,10 @@
-LIBRARIES_TO_FILE_PATHS = {
-    "Mockito": "annoMockito"
-}
+FILE_PATH_PREFIX = "anno"
+
+LIBRARIES_TITLE = [
+    "Jackson",
+    "Javax",
+    "Mockito"
+]
 
 TABS_TITLE = [
     {
