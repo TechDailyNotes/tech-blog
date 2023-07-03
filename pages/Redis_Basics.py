@@ -1,7 +1,7 @@
 import streamlit as st
 from utils import read_markdown_file
 
-st.header("Redis")
+st.header("Redis Basics")
 
 tab1, tab2, tab3 = st.tabs(["Concepts", "Scenarios", "Theories"])
 
