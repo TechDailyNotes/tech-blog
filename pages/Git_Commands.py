@@ -5,7 +5,7 @@ from consts.git_consts import GIT_COMMANDS_TO_FILE_PATHS
 st.header("Git Commands")
 
 command_name = st.selectbox(
-    "", options=GIT_COMMANDS_TO_FILE_PATHS.keys(), index=0, label_visibility="collapsed")
+    "Command names", options=GIT_COMMANDS_TO_FILE_PATHS.keys(), index=0, label_visibility="collapsed")
 
 st.divider()
 
