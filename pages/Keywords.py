@@ -18,5 +18,4 @@ option_title = display_default_select_box(
 st.divider()
 
 file_suffix = SELECTBOX_OPTION_TO_FILE_PATHS[option_title]
-st.markdown(read_markdown_file(
-    FILE_PATH_PREFIX + file_suffix))
+st.markdown(read_markdown_file(FILE_PATH_PREFIX + file_suffix))
