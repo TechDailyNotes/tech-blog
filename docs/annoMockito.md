@@ -1,6 +1,32 @@
 #### @Mock/@Spy
 
-1. verify()
+1. when().thenReturn()
+
+```markdown
+<!-- 1. Definition -->
+
+Define the behaviour of a given method with given parameters.
+```
+
+```java
+// 2. Syntax:
+
+when(mockedEmailService.sendEmail(anyString(), anyString())).thenReturn(true);
+// or
+given(mockedEmailService.sendEmail(anyString(), anyString())).willReturn(true);
+// or
+doReturn(true).when(mockedEmailService).sendEmail(anyString(), anyString());
+```
+
+```java
+// 3. Return Methods:
+
+willReturn()
+willThrow()
+will(() -> {}) // lambda expression
+```
+
+2. verify()
 
 ```markdown
 <!-- 1. Definition -->
@@ -43,30 +69,6 @@ endsWith()
 // 4. Method Call Times:
 
 verify(mockedEmailService, times(1)) is the same as verify(mockedEmailService)
-```
-
-2. given().will()
-
-```markdown
-<!-- 1. Definition -->
-
-Define the behaviour of a given method with given parameters.
-```
-
-```java
-// 2. Syntax:
-
-given(mockedEmailService.sendEmail(anyString(), anyString())).willReturn(true);
-// or
-when(mockedEmailService.sendEmail(anyString(), anyString())).thenReturn(true);
-```
-
-```java
-// 3. Return Methods:
-
-willReturn()
-willThrow()
-will(() -> {}) // lambda expression
 ```
 
 #### @Captor

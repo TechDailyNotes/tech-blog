@@ -1,6 +1,6 @@
 #### Links
 
-1. [`Annotations + API`](https://techblog.streamlit.app/Annotations_+_API) `-> Mockito`
+1. [`Annotations`](https://techblog.streamlit.app/Annotations) `-> Mockito`
 
 #### Test Double
 
