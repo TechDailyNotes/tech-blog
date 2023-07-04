@@ -85,3 +85,32 @@ It is used to capture arguments for mocked methods.
 
 DATA CAPTURE
 ```
+
+#### Unit Testing Procedure
+
+```markdown
+<!-- 1. Initialize stubs -->
+
+1. Use annotations
+2. Use builders
+```
+
+```markdown
+<!-- 2. Fake data -->
+```
+
+```markdown
+<!-- 3. Mock behaviors -->
+
+1. when().thenReturn()
+2. given().willReturn()
+3. verify().method()
+```
+
+```markdown
+<!-- 4. Assert -->
+
+1. assertThat()
+2. assertEquals()
+3. ...
+```
