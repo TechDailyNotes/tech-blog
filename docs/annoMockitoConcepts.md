@@ -123,7 +123,18 @@ This step verifies that the tested method has called the mocked methods with the
 ```markdown
 <!-- 6. Assert -->
 
-1. assertThat()
-2. assertEquals()
-3. ...
+1. assert return values
+   1. assertThat();
+   2. assertEquals();
+   3. ...
+2. assert exceptions
+   1. assertThrows();
+   2. ...
+3. assert captured instances (used with @Captor)
+   1. Object instance = captor.getValue();
+      assertSame(instance, expectedInstance);
+4. assert captured lambda arguments (used with @Captor)
+   1. Object lambda = captor.getValue();
+   2. lambda.execute();
+   3. verify(instanceOfLambda).method();
 ```
