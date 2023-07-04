@@ -10,4 +10,6 @@ st.header("Annotations")
 library_name = st.selectbox(
     "Library", options=LIBRARIES_TITLE, index=0, label_visibility="collapsed")
 
+st.divider()
+
 st.markdown(read_markdown_file(FILE_PATH_PREFIX + library_name + ".md"))

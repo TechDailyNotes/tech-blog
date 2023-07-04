@@ -7,4 +7,6 @@ st.header("Git Commands")
 command_name = st.selectbox(
     "Command names", options=GIT_COMMANDS_TO_FILE_PATHS.keys(), index=0, label_visibility="collapsed")
 
+st.divider()
+
 st.markdown(read_markdown_file(GIT_COMMANDS_TO_FILE_PATHS[command_name]))
