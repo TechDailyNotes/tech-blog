@@ -1,4 +1,4 @@
-HEADER = "Git Commands"
+HEADER = "Git"
 
 SELECTBOX_TITLE = "Commands"
 
