@@ -86,7 +86,7 @@ It is used to capture arguments for mocked methods.
 DATA CAPTURE
 ```
 
-#### Unit Testing Procedure
+#### Test Procedure
 
 ```markdown
 <!-- 1. Init stubs -->
@@ -137,4 +137,14 @@ This step verifies that the tested method has called the mocked methods with the
    1. Object lambda = captor.getValue();
    2. lambda.execute();
    3. verify(instanceOfLambda).method();
+```
+
+#### Test Types
+
+```markdown
+<!-- 1. Test return types and return values -->
+```
+
+```markdown
+<!-- 2. Test passing parameters -->
 ```
