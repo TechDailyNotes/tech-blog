@@ -1,7 +1,11 @@
+HEADER = "Annotations"
+
+SELECTBOX_TITLE = "Packages"
+
 FILE_PATH_PREFIX = "anno"
 
-LIBRARIES_TITLE = [
-    "Jackson",
-    "Javax",
-    "Mockito"
-]
+SELECTBOX_OPTION_TO_FILE_PATHS = {
+    "Jackson": "Jackson",
+    "Javax": "Javax",
+    "Mockito": "Mockito"
+}

@@ -1,12 +1,21 @@
 import streamlit as st
-from utils import read_markdown_file
-from consts.git_consts import GIT_COMMANDS_TO_FILE_PATHS
+from utils import (
+    display_default_select_box,
+    read_markdown_file
+)
+from consts.git_consts import (
+    HEADER,
+    SELECTBOX_TITLE,
+    FILE_PATH_PREFIX,
+    SELECTBOX_OPTION_TO_FILE_PATHS
+)
 
-st.header("Git Commands")
+st.header(HEADER)
 
-command_name = st.selectbox(
-    "Command names", options=GIT_COMMANDS_TO_FILE_PATHS.keys(), index=0, label_visibility="collapsed")
+option_title = display_default_select_box(
+    SELECTBOX_TITLE, SELECTBOX_OPTION_TO_FILE_PATHS)
 
 st.divider()
 
-st.markdown(read_markdown_file(GIT_COMMANDS_TO_FILE_PATHS[command_name]))
+file_suffix = SELECTBOX_OPTION_TO_FILE_PATHS[option_title]
+st.markdown(read_markdown_file(FILE_PATH_PREFIX + file_suffix))

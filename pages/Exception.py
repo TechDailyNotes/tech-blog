@@ -5,4 +5,4 @@ st.header("Exception")
 
 tab1 = st.tabs(["Questions"])
 
-tab1[0].markdown(read_markdown_file("exceptionQuestions.md"))
+tab1[0].markdown(read_markdown_file("exceptionQuestions"))

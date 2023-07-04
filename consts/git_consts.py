@@ -1,3 +1,9 @@
-GIT_COMMANDS_TO_FILE_PATHS = {
-    "git branch": "gitBranch.md"
+HEADER = "Git Commands"
+
+SELECTBOX_TITLE = "Commands"
+
+FILE_PATH_PREFIX = "git"
+
+SELECTBOX_OPTION_TO_FILE_PATHS = {
+    "git branch": "Branch"
 }
