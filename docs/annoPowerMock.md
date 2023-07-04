@@ -28,7 +28,7 @@
 
 #### @Mock/@Spy
 
-1. private method:
+1. Private method:
 
    when().thenReturn()/verifyPrivate()
 
@@ -60,7 +60,9 @@ doReturn().when(mock, "privateMethod", ArgumentMatchers.any())
 verifyPrivate(mock).invoke("privateMethod", ArgumentMatchers.any())
 ```
 
-2. mockStatic()/verifyStatic()
+2. Static method:
+
+   mockStatic()/verifyStatic()
 
 ```markdown
 <!-- 1. Definition -->
@@ -101,7 +103,9 @@ try (MockedStatic<StaticClass> mockedStatic = Mockito.mockStatic(StaticClass.cla
 PowerMockito.verifyStatic(StaticClass.class, atLeastOnce());
 ```
 
-3. whenNew()/verifyNew()
+3. Constructor:
+
+   whenNew()/verifyNew()
 
 ```markdown
 <!-- 1. Definition -->
@@ -142,4 +146,51 @@ PowerMockito.verifyNew(StaticClass.class, atLeastOnce())
 // or
 PowerMockito.verifyNew(StaticClass.class, atLeastOnce())
   .withAnyArguments();
+```
+
+4. Response controls:
+
+   doNothing()/doThrow()/doReturn()/doAnswer()
+
+```java
+/**
+ * 1. doNothing()
+ * @definition: do nothing when a method is called.
+ * @example:
+ */
+doNothing().when(mock).method();
+```
+
+```java
+/**
+ * 2. doThrow()
+ * @definition: throw an exception when a method is called.
+ * @example:
+ */
+doThrow(new RuntimeException()).when(mock).method();
+```
+
+```java
+/**
+ * 3. doAnswer()
+ * @definition: do a customized logic when a method is called.
+ * @example:
+ */
+doThrow(
+  invocation -> {
+    Object[] args = invocation.getArguments();
+    Object mock = invocation.getMock();
+    return null;
+  }
+).when(mock).method();
+```
+
+```java
+/**
+ * 4. doCallRealMethod()
+ * @definition: call the real method when a method is called.
+ * @explain: it's used in partial mocking.
+ * @example:
+ */
+doCallRealMethod().when(mock).method();
 ```
