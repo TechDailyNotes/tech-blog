@@ -89,14 +89,14 @@ DATA CAPTURE
 #### Unit Testing Procedure
 
 ```markdown
-<!-- 1. Initialize stubs -->
+<!-- 1. Init stubs -->
 
 1. Use annotations
 2. Use builders
 ```
 
 ```markdown
-<!-- 2. Fake data -->
+<!-- 2. Init variables -->
 ```
 
 ```markdown
@@ -108,7 +108,11 @@ DATA CAPTURE
 ```
 
 ```markdown
-<!-- 4. Assert -->
+<!-- 4. Call tested method -->
+```
+
+```markdown
+<!-- 5. Assert -->
 
 1. assertThat()
 2. assertEquals()
