@@ -102,9 +102,10 @@ DATA CAPTURE
 ```markdown
 <!-- 3. Mock behaviors -->
 
+This step mocks the behaviors of the dependencies of the tested method.
+
 1. when().thenReturn()
 2. given().willReturn()
-3. verify().method()
 ```
 
 ```markdown
@@ -112,7 +113,15 @@ DATA CAPTURE
 ```
 
 ```markdown
-<!-- 5. Assert -->
+<!-- 5. Verify behaviors -->
+
+This step verifies that the tested method has called the mocked methods with the expected arguments.
+
+1. verify().method()
+```
+
+```markdown
+<!-- 6. Assert -->
 
 1. assertThat()
 2. assertEquals()
