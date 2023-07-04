@@ -22,10 +22,13 @@ verify(mockedEmailService).sendEmail(
 ```
 
 ```java
-// 3. Argument Matchers:
-// @place: in the method called after verify().
-// @effect: match the arguments of the method called after verify().
+/**
+ * 3. Argument Matchers:
+ * @place: in the method called after verify().
+ * @effect: match the arguments of the method called after verify().
+ */
 
+// @examples:
 eq()
 isNull()
 notNull()
@@ -78,9 +81,35 @@ Capture the arguments of the method called after verify() for value checking.
 // 2. Syntax
 
 ArgumentCaptor<String> captor = ArgumentCaptor.forClass(String.class);
+// or
+@Captor
+ArgumentCaptor<String> captor;
+
 verify(mockedEmailService).sendEmail(captor.capture(), anyString());
 assertEquals("admin@test.com", captor.getEmail());
 assertEquals("admin", captor.getUsername());
+```
+
+```java
+/**
+ * 3. Usage
+ * @place: methods called inside the tested method.
+ * @place: tested method call.
+ */
+
+/**
+ * @avoid: use captor with stubbing.
+ * @reason: reduced readability
+ *          -- not obvious what the captor refers to.
+ * @reason: reduced defect localization
+ *          -- if the stubbing method is not called, the program reports an error.
+ *          -- but we expect the test to fail.
+ * @examples:
+ */
+Credentials credentials = new Credentials("admin", "admin");
+when(platform.authenticate(credentialCaptor.capture())).thenReturn(true);
+assertTrue(emailService.authenticateSuccess(credentials));
+assertEquals(credentials, captor.getValue());
 ```
 
 #### @InjectMocks
