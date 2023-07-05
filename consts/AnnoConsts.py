@@ -13,4 +13,5 @@ class AnnoConsts(Consts):
             "JUnit": "JUnit",
             "Mockito": "Mockito",
             "PowerMockito": "PowerMock",
+            "SpringBootTest": "SpringBootTest"
         }
