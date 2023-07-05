@@ -1,5 +1,7 @@
 #### `Links`
 
+[`Annotations -> JUnit`](https://techblog.streamlit.app/Annotations)
+
 [`Annotations -> Mockito`](https://techblog.streamlit.app/Annotations)
 
 [`Annotations -> PowerMockito`](https://techblog.streamlit.app/Annotations)
