@@ -1,6 +1,6 @@
 #### `Links`
 
-[`Testing`](https://techblog.streamlit.app/Testing) `-> Unit Testing`
+[`Testing -> Unit Testing`](https://techblog.streamlit.app/Testing)
 
 #### @Mock/@Spy
 
@@ -124,3 +124,11 @@ assertEquals(credentials, captor.getValue());
 
 Inject mocks into the class under test.
 ```
+
+#### `References`
+
+[`Mockito Source Code`](https://github.com/mockito/mockito)
+
+[`Mockito Framework Site`](https://site.mockito.org/)
+
+[`Mockito Tutorial -- Baeldung`](https://www.baeldung.com/mockito-series)

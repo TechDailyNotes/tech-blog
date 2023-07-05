@@ -1,7 +1,8 @@
-#### Links
+#### `Links`
 
-1. [`Annotations`](https://techblog.streamlit.app/Annotations) `-> Mockito`
-2. [`Annotations`](https://techblog.streamlit.app/Annotations) `-> PowerMockito`
+[`Annotations -> Mockito`](https://techblog.streamlit.app/Annotations)
+
+[`Annotations -> PowerMockito`](https://techblog.streamlit.app/Annotations)
 
 #### Test Double
 

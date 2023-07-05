@@ -1,6 +1,6 @@
-#### Links
+#### `Links`
 
-1. [`Testing`](https://techblog.streamlit.app/Testing) `-> Unit Testing`
+[`Testing -> Unit Testing`](https://techblog.streamlit.app/Testing)
 
 #### @Runwith
 
@@ -201,3 +201,11 @@ doThrow(
 
 doCallRealMethod().when(mock).method();
 ```
+
+#### `References`
+
+[`PowerMock Source Code`](https://github.com/powermock/powermock)
+
+[`PowerMock Framework Site`](https://powermock.github.io/)
+
+[`Introduction to PowerMock -- Baeldung`](https://www.baeldung.com/intro-to-powermock)
