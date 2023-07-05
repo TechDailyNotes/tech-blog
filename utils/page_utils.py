@@ -21,5 +21,6 @@ def display_default_page(constants_src: Constant) -> None:
 
     file_suffix = consts_dict["SELECTBOX_OPTION_TO_FILE_PATHS"][option_title]
     st.markdown(read_markdown_doc(
-        markdown_doc_name=consts_dict["FILE_PATH_PREFIX"] + file_suffix
+        markdown_doc_name=consts_dict["FILE_PATH_PREFIX"] + file_suffix,
+        folder_name=consts_dict["FOLDER_NAME"]
     ))
