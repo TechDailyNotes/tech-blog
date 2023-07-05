@@ -4,7 +4,7 @@
 
 #### @Mock/@Spy
 
-1. when().thenReturn()
+1. `when().thenReturn()`
 
 ```markdown
 <!-- 1. Definition -->
@@ -30,7 +30,7 @@ willThrow()
 will(() -> {}) // lambda expression
 ```
 
-2. verify()
+2. `verify()`
 
 ```markdown
 <!-- 1. Definition -->

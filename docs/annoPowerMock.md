@@ -34,7 +34,8 @@
 
 1. Private method:
 
-   when().thenReturn()/verifyPrivate()
+   `when().thenReturn()`
+   `verifyPrivate()`
 
 ```markdown
 <!-- 1. Definition -->
@@ -66,7 +67,8 @@ verifyPrivate(mock).invoke("privateMethod", ArgumentMatchers.any())
 
 2. Static method:
 
-   mockStatic()/verifyStatic()
+   `mockStatic()`
+   `verifyStatic()`
 
 ```markdown
 <!-- 1. Definition -->
@@ -109,7 +111,8 @@ PowerMockito.verifyStatic(StaticClass.class, atLeastOnce());
 
 3. Constructor:
 
-   whenNew()/verifyNew()
+   `whenNew()`
+   `verifyNew()`
 
 ```markdown
 <!-- 1. Definition -->
@@ -154,7 +157,10 @@ PowerMockito.verifyNew(StaticClass.class, atLeastOnce())
 
 4. Response controls:
 
-   doNothing()/doThrow()/doReturn()/doAnswer()
+   `doNothing()`
+   `doThrow()`
+   `doReturn()`
+   `doAnswer()`
 
 ```java
 /**
