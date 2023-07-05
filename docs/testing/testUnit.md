@@ -6,6 +6,8 @@
 
 [`Annotations -> PowerMockito`](https://techblog.streamlit.app/Annotations)
 
+[`Annotations -> SpringBootTest`](https://techblog.streamlit.app/Annotations)
+
 #### Test Double
 
 1. Dummy
