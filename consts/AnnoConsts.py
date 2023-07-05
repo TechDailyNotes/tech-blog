@@ -10,6 +10,7 @@ class AnnoConsts(Consts):
         self.SELECTBOX_OPTION_TO_FILE_PATHS = {
             "Jackson": "Jackson",
             "Javax": "Javax",
+            "JUnit": "JUnit",
             "Mockito": "Mockito",
             "PowerMockito": "PowerMock",
         }

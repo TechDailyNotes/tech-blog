@@ -2,34 +2,6 @@
 
 [`Testing -> Unit Testing`](https://techblog.streamlit.app/Testing)
 
-#### @Runwith
-
-```markdown
-<!-- 1. Definition -->
-
-1. Runwith is used to run the test with a specified runner.
-2. Optional runners:
-   1. MockitoJUnitRunner -- for Mockito tests
-   2. PowerMockRunner -- for PowerMockito tests
-```
-
-```java
-// 2. Syntax:
-
-@RunWith(MockitoJUnitRunner.class)
-@RunWith(PowerMockRunner.class)
-```
-
-#### @PrepareForTest
-
-```markdown
-<!-- 1. Definition -->
-
-1. PrepareForTest prepares the class for test.
-2. Similar to @Mock, @Spy, @InjectMocks.
-3. It's used with mock() and mockStatic() methods.
-```
-
 #### @Mock/@Spy
 
 1. Private method: `when().thenReturn()` `verifyPrivate()`
