@@ -23,3 +23,5 @@ def import_constants(constants_src: Constant) -> {str: str}:
         return SOAConsts().to_dict()
     elif constants_src is Constant.TESTING:
         return TestConsts().to_dict()
+    else:
+        raise ValueError(f"Unknown constant source: {constants_src}")
