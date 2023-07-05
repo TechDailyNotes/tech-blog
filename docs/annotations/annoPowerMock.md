@@ -32,10 +32,7 @@
 
 #### @Mock/@Spy
 
-1. Private method:
-
-   `when().thenReturn()`
-   `verifyPrivate()`
+1. Private method: `when().thenReturn()` `verifyPrivate()`
 
 ```markdown
 <!-- 1. Definition -->
@@ -48,8 +45,9 @@ Mock and verify private methods
  * 2. Syntax of when().thenReturn()
  * @explain: call private method of mock
  * @param: ArgumentMatchers is used to match arguments.
- * @example:
+ * @examples:
  */
+
 when(mock, "privateMethod", ArgumentMatchers.any()).thenReturn()
 // or
 doReturn().when(mock, "privateMethod", ArgumentMatchers.any())
@@ -60,15 +58,13 @@ doReturn().when(mock, "privateMethod", ArgumentMatchers.any())
  * 3. Syntax of verifyPrivate():
  * @explain: verify private method of mock
  * @param: ArgumentMatchers is used to match arguments.
- * @example:
+ * @examples:
  */
+
 verifyPrivate(mock).invoke("privateMethod", ArgumentMatchers.any())
 ```
 
-2. Static method:
-
-   `mockStatic()`
-   `verifyStatic()`
+2. Static method: `mockStatic()` `verifyStatic()`
 
 ```markdown
 <!-- 1. Definition -->
@@ -82,8 +78,9 @@ Mock and verify static methods
  * @explain: mock static method
  * @type: static method with no arguments
  * @solution: method reference
- * @example:
+ * @examples:
  */
+
 try (MockedStatic<StaticClass> mockedStatic = Mockito.mockStatic(StaticClass.class)) {
   mockedStatic.when(StaticClass::staticMethod).thenReturn();
 }
@@ -91,8 +88,9 @@ try (MockedStatic<StaticClass> mockedStatic = Mockito.mockStatic(StaticClass.cla
 /**
  * @type: static method with arguments
  * @solution: lambda expression
- * @example:
+ * @examples:
  */
+
 try (MockedStatic<StaticClass> mockedStatic = Mockito.mockStatic(StaticClass.class)) {
   mockedStatic.when(() -> StaticClass.staticMethod(ArgumentMatchers.any(), Object obj)).thenReturn();
 }
@@ -104,15 +102,13 @@ try (MockedStatic<StaticClass> mockedStatic = Mockito.mockStatic(StaticClass.cla
  * @explain: verify static method's interactions
  * @param: atLeastOnce() is used to verify the method is called at least once. (interaction)
  * @variation: verifyNoMoreInteractions()
- * @example:
+ * @examples:
  */
+
 PowerMockito.verifyStatic(StaticClass.class, atLeastOnce());
 ```
 
-3. Constructor:
-
-   `whenNew()`
-   `verifyNew()`
+3. Constructor: `whenNew()` `verifyNew()`
 
 ```markdown
 <!-- 1. Definition -->
@@ -124,8 +120,9 @@ Mock and verify constructor's behaviors
 /**
  * 2. Syntax of whenNew()
  * @explain: mock constructor
- * @example:
+ * @examples:
  */
+
 PowerMockito.whenNew(StaticClass.class)
   .withAnyArguments()
   .thenReturn(mock);
@@ -143,8 +140,9 @@ PowerMockito.whenNew(StaticClass.class)
 /**
  * 3. Syntax of verifyNew()
  * @explain: verify constructor's interactions
- * @example:
+ * @examples:
  */
+
 PowerMockito.verifyNew(StaticClass.class, atLeastOnce())
   .withArguments(Object obj, ArgumentMatchers.any());
 // or
@@ -155,19 +153,15 @@ PowerMockito.verifyNew(StaticClass.class, atLeastOnce())
   .withAnyArguments();
 ```
 
-4. Response controls:
-
-   `doNothing()`
-   `doThrow()`
-   `doReturn()`
-   `doAnswer()`
+4. Response controls: `doNothing()` `doThrow()` `doReturn()` `doAnswer()`
 
 ```java
 /**
  * 1. doNothing()
  * @definition: do nothing when a method is called.
- * @example:
+ * @examples:
  */
+
 doNothing().when(mock).method();
 ```
 
@@ -175,8 +169,9 @@ doNothing().when(mock).method();
 /**
  * 2. doThrow()
  * @definition: throw an exception when a method is called.
- * @example:
+ * @examples:
  */
+
 doThrow(new RuntimeException()).when(mock).method();
 ```
 
@@ -184,8 +179,9 @@ doThrow(new RuntimeException()).when(mock).method();
 /**
  * 3. doAnswer()
  * @definition: do a customized logic when a method is called.
- * @example:
+ * @examples:
  */
+
 doThrow(
   invocation -> {
     Object[] args = invocation.getArguments();
@@ -200,7 +196,8 @@ doThrow(
  * 4. doCallRealMethod()
  * @definition: call the real method when a method is called.
  * @explain: it's used in partial mocking.
- * @example:
+ * @examples:
  */
+
 doCallRealMethod().when(mock).method();
 ```

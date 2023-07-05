@@ -1,6 +1,6 @@
-#### Links
+#### `Links`
 
-1. [`Testing`](https://techblog.streamlit.app/Testing) `-> Unit Testing`
+[`Testing`](https://techblog.streamlit.app/Testing) `-> Unit Testing`
 
 #### @Mock/@Spy
 
@@ -43,7 +43,6 @@ After a method call, use verify to check if an internal method is called and how
 
 @Mock
 private EmailService mockedEmailService;
-
 userService.register(user);
 verify(mockedEmailService).sendEmail(
   eq("admin@test.com"),
@@ -56,9 +55,9 @@ verify(mockedEmailService).sendEmail(
  * 3. Argument Matchers:
  * @place: in the method called after verify().
  * @effect: match the arguments of the method called after verify().
+ * @examples:
  */
 
-// @examples:
 eq()
 isNull()
 notNull()
@@ -72,7 +71,9 @@ endsWith()
 ```java
 // 4. Method Call Times:
 
-verify(mockedEmailService, times(1)) is the same as verify(mockedEmailService)
+verify(mockedEmailService, times(1))
+// is the same as
+verify(mockedEmailService)
 ```
 
 #### @Captor
@@ -100,10 +101,7 @@ assertEquals("admin", captor.getUsername());
 /**
  * 3. Usage
  * @place: methods called inside the tested method.
- * @place: tested method call.
- */
-
-/**
+ * @place: tested method.
  * @avoid: use captor with stubbing.
  * @reason: reduced readability
  *          -- not obvious what the captor refers to.
@@ -112,6 +110,7 @@ assertEquals("admin", captor.getUsername());
  *          -- but we expect the test to fail.
  * @examples:
  */
+
 Credentials credentials = new Credentials("admin", "admin");
 when(platform.authenticate(credentialCaptor.capture())).thenReturn(true);
 assertTrue(emailService.authenticateSuccess(credentials));

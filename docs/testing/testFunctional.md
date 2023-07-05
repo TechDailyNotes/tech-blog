@@ -10,7 +10,7 @@
 ```markdown
 <!-- 2. Purposes -->
 
-1. Test business logics and behaviors
+Test business logics and behaviors
 ```
 
 ```markdown
