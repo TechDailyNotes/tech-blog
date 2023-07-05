@@ -1,8 +1,4 @@
-import streamlit as st
-from utils import read_markdown_file
+from enums.const_enums import Constant
+from utils.page_utils import display_default_page
 
-st.header("Exception")
-
-tab1 = st.tabs(["Questions"])
-
-tab1[0].markdown(read_markdown_file("exceptionQuestions"))
+display_default_page(Constant.EXCEPTION)

@@ -1,7 +1,9 @@
 import streamlit as st
 
+from enums.const_enums import Constant
 
-def display_default_page(constants_src: str) -> None:
+
+def display_default_page(constants_src: Constant) -> None:
     from utils.component_utils import display_default_select_box
     from utils.const_utils import import_constants
     from utils.doc_utils import read_markdown_doc
