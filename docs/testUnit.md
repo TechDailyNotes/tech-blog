@@ -1,7 +1,7 @@
 #### Links
 
-1. [`Mockito Annotations`](https://techblog.streamlit.app/Annotations) `-> Mockito`
-2. [`PowerMockito Annotations`](https://techblog.streamlit.app/Annotations) `-> PowerMockito`
+1. [`Annotations`](https://techblog.streamlit.app/Annotations) `-> Mockito`
+2. [`Annotations`](https://techblog.streamlit.app/Annotations) `-> PowerMockito`
 
 #### Test Double
 
