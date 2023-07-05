@@ -1,3 +1,3 @@
-from utils import display_default_page
+from utils.page_utils import display_default_page
 
 display_default_page("anno")
