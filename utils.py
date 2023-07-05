@@ -18,36 +18,44 @@ def display_default_select_box(selectbox_title: str, selectbox_title_to_file_pat
                         options=selectbox_title_to_file_paths.keys(), index=0, label_visibility="collapsed")
 
 
-# def display_default_page(constants_src: str) -> None:
-#     import streamlit as st
-#     from utils import (
-#         display_default_select_box,
-#         read_markdown_file
-#     )
+def display_default_page(constants_src: str) -> None:
+    import streamlit as st
+    from utils import (
+        display_default_select_box,
+        read_markdown_file
+    )
 
-#     import_constants(constants_src)
+    consts_dict = import_constants(constants_src)
 
-#     st.header(consts.HEADER)
+    st.header(consts_dict["HEADER"])
 
-#     option_title = display_default_select_box(
-#         consts.SELECTBOX_TITLE, consts.SELECTBOX_OPTION_TO_FILE_PATHS)
+    option_title = display_default_select_box(
+        consts_dict["SELECTBOX_TITLE"],
+        consts_dict["SELECTBOX_OPTION_TO_FILE_PATHS"]
+    )
 
-#     st.divider()
+    st.divider()
 
-#     file_suffix = consts.SELECTBOX_OPTION_TO_FILE_PATHS[option_title]
-#     st.markdown(read_markdown_file(consts.FILE_PATH_PREFIX + file_suffix))
+    file_suffix = consts_dict["SELECTBOX_OPTION_TO_FILE_PATHS"][option_title]
+    st.markdown(read_markdown_file(
+        consts_dict["FILE_PATH_PREFIX"] +
+        file_suffix
+    ))
 
 
-# def import_constants(constants_src: str):
-#     if constants_src == "anno":
-#         import consts.anno_consts as consts
-    # elif constants_src is "common":
-    #     from consts.common_consts import *
-    # elif constants_src is "git":
-    #     from consts.git_consts import *
-    # elif constants_src is "key":
-    #     from consts.key_consts import *
-    # elif constants_src is "soa":
-    #     from consts.soa_consts import *
-    # elif constants_src is "test":
-    #     from consts.test_consts import *
+def import_constants(constants_src: str) -> {str: str}:
+    if constants_src == "anno":
+        from consts.anno_consts import CONSTS_DICT
+        return CONSTS_DICT
+    elif constants_src is "git":
+        from consts.git_consts import CONSTS_DICT
+        return CONSTS_DICT
+    elif constants_src is "key":
+        from consts.key_consts import CONSTS_DICT
+        return CONSTS_DICT
+    elif constants_src is "soa":
+        from consts.soa_consts import CONSTS_DICT
+        return CONSTS_DICT
+    elif constants_src is "test":
+        from consts.test_consts import CONSTS_DICT
+        return CONSTS_DICT
