@@ -1,4 +1,5 @@
 from consts.AnnoConsts import AnnoConsts
+from consts.PatternConsts import PatternConsts
 from consts.ExceptionConsts import ExceptionConsts
 from consts.GitConsts import GitConsts
 from consts.KeyConsts import KeyConsts
@@ -11,6 +12,8 @@ from enums.const_enums import Constant
 def import_constants(constants_src: Constant) -> {str: str}:
     if constants_src == Constant.ANNOTATIONS:
         return AnnoConsts().to_dict()
+    elif constants_src == Constant.DESIGN_PATTERNS:
+        return PatternConsts().to_dict()
     elif constants_src is Constant.EXCEPTION:
         return ExceptionConsts().to_dict()
     elif constants_src is Constant.GIT:
