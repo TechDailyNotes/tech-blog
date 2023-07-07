@@ -8,5 +8,6 @@ class QConfigConsts(Consts):
         self.FOLDER_NAME = "qconfig/"
         self.FILE_PATH_PREFIX = "qconfig"
         self.SELECTBOX_OPTION_TO_FILE_PATHS = {
-            "Features": "Features"
+            "Traditional Configuration": "Old",
+            "Configuration Center": "Center"
         }
