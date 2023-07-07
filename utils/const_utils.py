@@ -3,6 +3,7 @@ from consts.PatternConsts import PatternConsts
 from consts.ExceptionConsts import ExceptionConsts
 from consts.GitConsts import GitConsts
 from consts.KeyConsts import KeyConsts
+from consts.QConfigConsts import QConfigConsts
 from consts.RedisConsts import RedisConsts
 from consts.SOAConsts import SOAConsts
 from consts.TestConsts import TestConsts
@@ -20,6 +21,8 @@ def import_constants(constants_src: Constant) -> {str: str}:
         return GitConsts().to_dict()
     elif constants_src is Constant.KEYWORDS:
         return KeyConsts().to_dict()
+    elif constants_src is Constant.QCONFIG:
+        return QConfigConsts().to_dict()
     elif constants_src is Constant.REDIS:
         return RedisConsts().to_dict()
     elif constants_src is Constant.SOA:
