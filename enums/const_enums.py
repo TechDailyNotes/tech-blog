@@ -7,6 +7,7 @@ class Constant(Enum):
     EXCEPTION = "exception"
     GIT = "git"
     KEYWORDS = "key"
+    QCONFIG = "qconfig"
     REDIS = "redis"
     SOA = "soa"
     TESTING = "test"
