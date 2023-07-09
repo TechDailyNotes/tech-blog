@@ -10,4 +10,5 @@ class Constant(Enum):
     QCONFIG = "qconfig"
     REDIS = "redis"
     SOA = "soa"
+    SQL_TUNING = "sql"
     TESTING = "test"

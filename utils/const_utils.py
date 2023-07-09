@@ -6,6 +6,7 @@ from consts.KeyConsts import KeyConsts
 from consts.QConfigConsts import QConfigConsts
 from consts.RedisConsts import RedisConsts
 from consts.SOAConsts import SOAConsts
+from consts.SQLConsts import SQLConsts
 from consts.TestConsts import TestConsts
 from enums.const_enums import Constant
 
@@ -27,6 +28,8 @@ def import_constants(constants_src: Constant) -> {str: str}:
         return RedisConsts().to_dict()
     elif constants_src is Constant.SOA:
         return SOAConsts().to_dict()
+    elif constants_src is Constant.SQL_TUNING:
+        return SQLConsts().to_dict()
     elif constants_src is Constant.TESTING:
         return TestConsts().to_dict()
     else:
