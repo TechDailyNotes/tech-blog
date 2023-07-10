@@ -11,5 +11,7 @@ class PatternConsts(Consts):
             "Design Principals": "Principal",
             "Creational Patterns": "Creational",
             "Structural Patterns": "Structural",
-            "Behavioral Patterns": "Behavioral"
+            "Behavioral Patterns": "Behavioral",
+            "Pattern Connections": "Connections",
+            "J2EE Patterns": "J2EE"
         }
