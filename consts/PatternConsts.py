@@ -13,5 +13,6 @@ class PatternConsts(Consts):
             "Structural Patterns": "Structural",
             "Behavioral Patterns": "Behavioral",
             "Pattern Connections": "Connections",
-            "J2EE Patterns": "J2EE"
+            "J2EE Patterns": "J2EE",
+            "External Resources": "External"
         }
