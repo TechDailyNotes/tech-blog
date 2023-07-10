@@ -12,7 +12,7 @@
 
 #### Flyweight Pattern (享元模式)
 
-#### Proxy Pattern
+#### Proxy Pattern (代理模式)
 
 1. Concepts:
 
