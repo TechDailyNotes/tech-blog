@@ -6,6 +6,12 @@
 
 #### Composite Pattern (组合模式)
 
+```markdown
+<!-- 1. Definition -->
+
+Decouple simple objects and complex objects, and treat them uniformly.
+```
+
 #### Decorator Pattern (装饰器模式)
 
 #### Facade Pattern (外观模式)
